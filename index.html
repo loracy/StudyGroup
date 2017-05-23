@@ -4,17 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- jquery / js -->
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="js/jquery.blueberry.js"></script>
-
-<script>
-$(window).load(function() {
-  $('.blueberry').blueberry();
-});
-</script>
 <!-- css -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -22,90 +16,106 @@ $(window).load(function() {
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>讀書會</title>
 </head>
+
 <body>
     <div class="container">
-      <div class="section-00 text-center row">
+      <div class="text-center row">
         <div class="title col-xs-12">
           <p>讀書會</p>
           <div class="full-line"></div>
         </div><!-- title -->
         <div class="main-nav col-xs-12">
-          <ul>
-            <li><a href="#" class="active">畫匣子</a></li>
-            <li><a href="#">Begin it</a></li>
-            <li><a href="#">機器人</a></li>
+          <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active" id="myTabs"><a href="#drawerScreen" aria-controls="home" role="tab" data-toggle="tab">畫匣子</a></li>
+            <li role="presentation" id="myTabs"><a href="#beginitScreen" aria-controls="profile" role="tab" data-toggle="tab">Begin it</a></li>
+            <li role="presentation" id="myTabs"><a href="#robotScreen" aria-controls="messages" role="tab" data-toggle="tab">機器人</a></li>
           </ul>
         </div><!-- main-nav -->
-      </div><!-- section-00 -->
 
-      <div class="section-01 col-xs-10 col-xs-offset-1">
-        <ul class="sec-01-images">
-          <li class="sec-01-img-left"><img src="img/sec-01-img.png"/></li>
-          <li class="sec-01-img-right"><img src="img/sec-01-img.png"></li>
-        </ul>
-        <ul class="pages">
-          <li><a href="#" class="active"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </div><!-- section-01 -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="drawerScreen">
+              <div class="section-01 col-xs-10 col-xs-offset-1">
+                <ul class="sec-01-images">
+                  <li class="sec-01-img-left"><img src="img/sec-01-img.png"/></li>
+                  <li class="sec-01-img-right"><img src="img/sec-01-img.png"></li>
+                </ul>
+                <ul class="pages">
+                  <li><a href="#" class="active"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div><!-- section-01 -->
 
-      <div class="section-02">
-        <div class="title col-xs-10 col-xs-offset-1 text-center">
-          <p>活動介紹</p>
-          <div class=" text-center full-line"></div>
-        </div><!-- title -->
-        <div class="sec-02-content col-xs-10 col-xs-offset-1">
-          <div class="sec-02-img">
-            <img src="img/sec-02-img.png"/>
-          </div>
-          <div class="sec-02-text">
-            <p class="text-center">活動介紹1<br>
-                活動介紹活動介紹<br>
-                活動介紹活動介紹活動介紹<br>
-                活動介紹活動介紹活動介紹活動介紹
-            </p>
-          </div><!-- sec-02-text -->
-        </div><!-- sec-02-content -->
-        <ul class="pages col-xs-12">
-          <li><a href="#" class="active"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </div><!-- section-02 -->
+              <div class="section-02">
+                <div class="title col-xs-10 col-xs-offset-1 text-center">
+                  <p>活動介紹</p>
+                  <div class=" text-center full-line"></div>
+                </div><!-- title -->
+                <div class="sec-02-content col-xs-10 col-xs-offset-1">
+                  <div class="sec-02-img">
+                    <img src="img/sec-02-img.png"/>
+                  </div>
+                  <div class="sec-02-text">
+                    <p class="text-center">活動介紹1<br>
+                        活動介紹活動介紹<br>
+                        活動介紹活動介紹活動介紹<br>
+                        活動介紹活動介紹活動介紹活動介紹
+                    </p>
+                  </div><!-- sec-02-text -->
+                </div><!-- sec-02-content -->
+                <ul class="pages col-xs-12">
+                  <li><a href="#" class="active"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div><!-- section-02 -->
 
-      <div class="section-03">
-        <div class="title col-xs-10 col-xs-offset-1  text-center">
-          <p>作品展示</p>
-          <div class="full-line"></div>
-        </div><!-- title -->
-        <div class="sec-03-content col-xs-10 col-xs-offset-1 text-center">
-          <div class="sec-03-topics">
-            <ul>
-              <li class="line"><a href="#" class="active">主題</a></li>
-              <li class="line"><a href="#">主題</a></li>
-              <li class="line"><a href="#">主題</a></li>
-              <li><a href="#">主題</a></li>
-            </ul>
-          </div><!-- sec-03-topics -->
-          <div class="sec-03-images">
-            <ul>
-              <li class="sec-03-img-1"><img src="img/sec-03-img.png"/></li>
-              <li class="sec-03-img-2"><img src="img/sec-03-img.png"/></li>
-              <li class="sec-03-img-3"><img src="img/sec-03-img.png"/></li>
-              <li class="sec-03-img-4"><img src="img/sec-03-img.png"/></li>
-            </ul>
-          </div><!-- sec-03-images -->
-        </div><!-- sec-03-content -->
-        <ul class="pages col-xs-12">
-          <li><a href="#" class="active"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </div><!-- section-03 -->
+              <div class="section-03">
+                <div class="title col-xs-10 col-xs-offset-1  text-center">
+                  <p>作品展示</p>
+                  <div class="full-line"></div>
+                </div><!-- title -->
+                <div class="sec-03-content col-xs-10 col-xs-offset-1 text-center">
+                  <div class="sec-03-topics">
+                    <ul>
+                      <li class="line"><a href="#" class="active">主題</a></li>
+                      <li class="line"><a href="#">主題</a></li>
+                      <li class="line"><a href="#">主題</a></li>
+                      <li><a href="#">主題</a></li>
+                    </ul>
+                  </div><!-- sec-03-topics -->
+                  <div class="sec-03-images">
+                    <ul>
+                      <li class="sec-03-img-1"><img src="img/sec-03-img.png"/></li>
+                      <li class="sec-03-img-2"><img src="img/sec-03-img.png"/></li>
+                      <li class="sec-03-img-3"><img src="img/sec-03-img.png"/></li>
+                      <li class="sec-03-img-4"><img src="img/sec-03-img.png"/></li>
+                    </ul>
+                  </div><!-- sec-03-images -->
+                </div><!-- sec-03-content -->
+                <ul class="pages col-xs-12">
+                  <li><a href="#" class="active"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div><!-- section-03 -->
+            </div><!-- drawerScreen -->
+            <div role="tabpanel" class="tab-pane fade" id="beginitScreen">
+              <div class="row">
+                Begin It Screen
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="robotScreen">
+              <div class="row"> 
+                Robot Screen
+              </div>
+            </div>
+          </div><!-- tab-content -->
+      </div>        
     </div><!-- container -->
+      
 </body>
 <!-- </html> -->

@@ -19,6 +19,9 @@ body{
 	height: 158.2px;
 	background-color: #699585;
 }
+.full-line{
+	border-top:#545454 solid 2px; 
+}
 /*--------------carousel-indicators--------------*/
 #carousel-sec-01{
 	height: 285px;
@@ -36,33 +39,7 @@ body{
 .carousel-indicators li:hover{
 	background-color: #666666;
 }
-/*--------------pages--------------*/
-.pages{
-	padding: 0;
-	text-align: center;
-	margin-bottom: 26px;
-}
-.pages li{
-	display: inline-flex;	
-	padding: 0 5px;
-}
-.pages li a{
-	width: 8px;
-	height: 8px;
-	border-radius: 15px;
-	text-decoration: none;
-	background-color: #545454;
-}
-.pages li a:hover{
-	background-color: #666666;
-}
-.pages li .active{
-	background-color: #DDDDDD;
-}
 
-.full-line{
-	border-top:#545454 solid 2px; 
-}
 /*-------------title---------------*/
 .title{
 	font-size: 18.77px;
@@ -195,4 +172,29 @@ body{
 }
 .sec-03-img-1,.sec-03-img-2,.sec-03-img-3{
 	margin-right: 2%;
+}
+
+.show-sm{
+    	display: none;
+    }
+
+/*RWD*/
+/*------------size:sm---------------------------------*/
+@media screen and (max-width: 1200px){
+
+    .hide-sm{
+    	display: none;
+    }
+    .show-sm{
+    	display: block;
+    }
+    #header{
+		height: 140px;
+	}
+	.container{
+		/*margin:0;*/
+		/*padding:0;*/
+	}
+
+
 }
